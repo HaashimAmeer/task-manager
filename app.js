@@ -7,12 +7,8 @@ const connectDB = require("./db/connect");
 require("dotenv").config();
 
 // middleware
+app.use(express.static("./public"));
 app.use(express.json());
-
-//routes
-app.get("/hello", (req, res) => {
-  res.end("Task Manager App");
-});
 
 // API STRUCTURE
 // api.get("/api/v1/tasks)          get all the tasks
